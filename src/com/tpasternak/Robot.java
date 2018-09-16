@@ -7,7 +7,6 @@ public class Robot {
 
     public Robot(String id) {
         this.id = id;
-        isWorking = true;
     }
 
     public String getAction() {

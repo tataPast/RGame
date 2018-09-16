@@ -3,11 +3,15 @@ package com.tpasternak;
 import java.util.ArrayList;
 
 public class Player {
-    String name;
-    ArrayList<Robot> robotPool;
+    private  String name;
+    private  ArrayList<Robot> robotPool;
 
     public Player(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void getRobotsForFight() {
