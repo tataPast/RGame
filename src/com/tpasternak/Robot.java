@@ -1,12 +1,13 @@
 package com.tpasternak;
 
 public class Robot {
-    String id;
+    private String id;
     boolean isWorking;
-    int winsCount;
+    private int winsCount;
 
     public Robot(String id) {
         this.id = id;
+        isWorking = true;
     }
 
     public String getAction() {
