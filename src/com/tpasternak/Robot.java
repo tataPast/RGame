@@ -42,7 +42,7 @@ public class Robot {
         isWorking = false;
     }
 
-    public void addWin() {
-        winsCount++;
+    public void addWin(int i) {
+        winsCount =+ i;
     }
 }

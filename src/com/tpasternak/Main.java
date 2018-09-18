@@ -9,8 +9,6 @@ public class Main {
         Player player1 = new Player("zzz", robots);
         Player player2 = new Player("xxx", robots);
 
-
-
         Battle firstBattle = new Battle(player1, player2);
         player1.getRobotForFight();
         player2.getRobotForFight();
