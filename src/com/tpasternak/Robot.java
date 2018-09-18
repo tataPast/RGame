@@ -1,8 +1,9 @@
 package com.tpasternak;
 
 public class Robot {
+
     private String id;
-    boolean isWorking;
+    private boolean isWorking;
     private int winsCount;
 
     public Robot(String id) {
@@ -19,6 +20,22 @@ public class Robot {
             tempAction = "Attack";
         }
         return tempAction;
+    }
+
+    public int getWinsCount() {
+        return winsCount;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public boolean isWorking() {
+        return isWorking;
+    }
+
+    public void setWinsCount(int winsCount) {
+        this.winsCount = winsCount;
     }
 
     public void setIsWorking() {

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Player {
     private String name;
+
     private ArrayList<Robot> robotPool;
 
     public Player(String name, ArrayList<Robot> robotPool) {
@@ -19,10 +20,16 @@ public class Player {
         return name;
     }
 
+    public ArrayList<Robot> getRobotPool() {
+        return robotPool;
+    }
+
+
+
     public Robot getRobotForFight() {
         for (int i = 0; i < robotPool.size(); i++) {
             Robot robot = robotPool.get(i);
-            if (robotPool.get(i).isWorking) {
+            if (robotPool.get(i).isWorking()) {
                 return robot;
             }
         } return null;
