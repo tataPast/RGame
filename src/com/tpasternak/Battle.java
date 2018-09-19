@@ -2,17 +2,18 @@ package com.tpasternak;
 
 
 public class Battle {
-    private Robot robot1;
-    private Robot robot2;
-    private String action1;
-    private String action2;
+    Robot robot1;
+    Robot robot2;
 
     public Battle(Player player1, Player player2) {
-        action1 = player1.getRobotForFight().getAction();
-        action2 = player2.getRobotForFight().getAction();
-        robot1 = player1.getRobotForFight();
-        robot2 = player2.getRobotForFight();
-        while (robot1.isWorking() | robot2.isWorking()) {
+        String action1 = player1.getRobotForFight().getAction();
+        String action2 = player2.getRobotForFight().getAction();
+
+        do {
+            robot1 = player1.getRobotForFight();
+            robot2 = player2.getRobotForFight();
+        }
+        while (robot1.isWorking() | robot2.isWorking()); {
 
             if (action1.contains("Attack") == action2.contains("Attack")) {
                 robot1.addWin(1);
