@@ -2,6 +2,11 @@ package com.tpasternak;
 
 public class Robot {
 
+    enum Action{
+        ATTACK,
+        FLEE
+    }
+
     private String id;
     private boolean isWorking;
     private int winsCount;
@@ -11,13 +16,13 @@ public class Robot {
         isWorking = true;
     }
 
-    public String getAction() {
+    public Action getAction() {
         int random = (int) (Math.random() * 6);
-        String tempAction;
+        Action tempAction;
         if (random <= 2) {
-            tempAction = "Flee";
+            tempAction = Action.FLEE;
         } else {
-            tempAction = "Attack";
+            tempAction = Action.ATTACK;
         }
         return tempAction;
     }
