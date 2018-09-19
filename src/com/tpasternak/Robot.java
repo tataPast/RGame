@@ -2,7 +2,7 @@ package com.tpasternak;
 
 public class Robot {
 
-    enum Action{
+    public enum Action{
         ATTACK,
         FLEE
     }
